@@ -1,0 +1,80 @@
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+
+    &__descr {
+        padding: 20px 24px;
+    }
+
+    &__title {
+        margin: 0 0 4px 0;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 2px;
+        color: $title-text-color;
+        text-decoration: none;
+        letter-spacing: 0.06em;
+    }
+
+    &__item {
+        display: block;
+        box-shadow: 0 0 1px #888;
+        text-decoration: none;
+
+
+    }
+
+    &__item:hover {
+        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    &__text {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__img {
+        margin: 0;
+        display: block;
+    }
+
+    &__offers {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0 24px;
+        top: 0;
+        left: 0;
+        font-size: 18px;
+        line-height: 1.5;
+
+        background-color: $hover-color;
+        color: $body-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include transition(transform);
+        transform: translateY(101%);
+    }
+
+    &__item:hover &__offers,
+    &__item:focus &__offers {
+        transform: translateY(0);
+    }
+
+    &__menu {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.9;
+        color: $main-color-text;
+        letter-spacing: 0.03em;
+    }
+}

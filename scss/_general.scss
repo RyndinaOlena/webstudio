@@ -1,0 +1,59 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $body-color;
+    color: $title-text-color;
+    font-size: 14px;
+
+}
+
+.hidden {
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    margin: 0;
+}
+
+.reset-list {
+    margin: 0;
+    padding: 0;
+}
+
+.reset-list li {
+    list-style: none;
+}
+
+.interest {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+// image,
+// a {
+//     display: block;
+// }
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+}

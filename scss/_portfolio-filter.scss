@@ -1,0 +1,33 @@
+.filter {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &__button {
+        background-color: $button-background;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6;
+        color: $title-text-color;
+        border-radius: 4px;
+        border: none;
+        font-family: inherit;
+        letter-spacing: 0.03em;
+        padding: 6px 25px;
+        height: 38px;
+
+        @include transition(color,
+            background-color,
+            box-shadow);
+
+        &:hover,
+        &:focus {
+            background-color: $hover-color;
+            color: rgba(245, 244, 250, 1);
+            cursor: pointer;
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+
+        }
+    }
+}

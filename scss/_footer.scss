@@ -1,0 +1,92 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2F303A;
+
+    &__logo {
+        font-family: 'Raleway', sans-serif;
+        font-size: 26px;
+        line-height: 1.6;
+        text-decoration: none;
+        color: $body-color;
+        letter-spacing: 0.03em;
+
+        & .blue {
+            color: $hover-color;
+        }
+    }
+
+    &__list {
+        padding: 0;
+        margin: 20px 0 0 0;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        list-style: none;
+        font-style: normal;
+    }
+
+    &__addr {
+        color: $body-color;
+        text-decoration: none;
+    }
+
+    &__item {
+        margin-bottom: 9px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__nav {
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        font-style: normal;
+        letter-spacing: 0.03em;
+        @include transition(color);
+
+        &:hover,
+        &:focus {
+            color: $hover-color;
+
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__option {
+
+        width: 230px;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__apps {
+        margin: 12px 0 0 30px;
+        padding: 0;
+    }
+}
+
+
+
+.subscribe {
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+
+    &__list {
+        gap: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}

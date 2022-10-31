@@ -1,0 +1,247 @@
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    & .modal {
+        scale: 0;
+    }
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    @include transition(opacity, visibility);
+}
+
+.modal {
+    width: 528px;
+    height: 581px;
+    background-color: $body-color;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 40px;
+    position: absolute;
+
+    @include transition(scale);
+
+    &__close {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        cursor: pointer;
+        top: 8px;
+        right: 8px;
+        background-color: rgb(255, 255, 255);
+
+        &:hover,
+        &:focus {
+            fill: $hover-color;
+        }
+    }
+
+
+
+
+
+
+
+    &_btn {
+        width: 12px;
+        height: 12px;
+    }
+
+    &__wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 15px;
+        width: 18px;
+        height: 18px;
+        fill: rgba(33, 33, 33, 1);
+        z-index: 1;
+    }
+
+}
+
+.modal-chekbox-item {
+    margin-top: 13px;
+}
+
+.modal-checkbox-label {
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: rgba(117, 117, 117, 1);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+.form__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+    color: black;
+    letter-spacing: 0.03em;
+
+
+}
+
+.form {
+    font-size: 12px;
+    line-height: 1.5;
+
+    /* margin: 40px; */
+    &__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.8;
+        text-align: center;
+        color: black;
+        letter-spacing: 0.03em;
+
+
+    }
+
+    &__label {
+        display: block;
+        margin: 12px auto 4px;
+        color: rgba(117, 117, 117, 1);
+
+    }
+
+    &__input {
+        display: block;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        outline: transparent;
+        padding-left: 42px;
+        border-radius: 4px;
+        height: 40px;
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            border: 1px solid $hover-color;
+            @include transition(border)
+        }
+
+        &:hover+.modal__icon,
+        &:focus+.modal__icon {
+            cursor: pointer;
+            fill: $hover-color;
+            @include transition(fill);
+        }
+    }
+
+    &__btn {
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.06em;
+        color: $body-color;
+        background-color: $hover-color;
+        border: 0;
+        padding: 0;
+        width: 200px;
+        height: 50px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+#comment {
+    margin: 0;
+    padding: 0;
+    padding: 12px 16px;
+    resize: none;
+    width: 448px;
+    height: 120px;
+}
+
+
+/* чекбокс! */
+.custom__checkbox {
+    &__input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-left: 14px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        color: $hover-color;
+        margin: 0;
+        line-height: calc(24/14);
+        letter-spacing: 0.03em;
+    }
+
+    &__icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 15px;
+        border-radius: 2px;
+        border: 2px solid $title-text-color;
+    }
+
+    &__svg {
+        width: 11px;
+        height: 8px;
+    }
+
+    &__input:checked+&__label &__icon {
+
+        background-color: $hover-color;
+        border-color: $hover-color;
+    }
+
+    &__input:checked+&__label &__svg {
+        opacity: 1;
+
+    }
+
+    &__text {
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: rgba(117, 117, 117, 1);
+    }
+}
