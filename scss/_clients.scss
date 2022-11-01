@@ -1,6 +1,6 @@
 /* заголовок */
 .clients {
-    padding: 94px 0;
+    @include section-paddings;
 
     &__regular {
         margin: 0 0 50px 0;
@@ -17,32 +17,55 @@
 
     &__picture {
         display: flex;
+        flex-wrap: wrap;
         margin: 0;
         justify-content: space-between;
         align-items: center;
 
         list-style: none;
         padding: 0;
+
+        @include for-mobile-and-tablet {
+            gap: 30px;
+        }
     }
 
     &__company {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 172px;
-        height: 92px;
         border: 1px solid $icon-color;
         border-radius: 4px;
+        height: 92px;
         @include transition(bordrer-color, fill);
 
         &:focus,
         &:hover {
             border-color: $hover-color;
         }
+
+        @include for-mobile-and-tablet {
+            width: 100%;
+        }
+
+
+        @include for-desktop {
+            width: 172px;
+        }
     }
 
     &__descr {
         display: flex;
+
+        @include for-mobile {
+            flex-shrink: 0;
+            width: calc(100% / 2 - 30px);
+        }
+
+        @include for-tablet {
+            flex-shrink: 0;
+            width: calc(100% / 3 - 30px);
+        }
     }
 
     &__name {

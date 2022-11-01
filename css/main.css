@@ -47,24 +47,20 @@ body {
   }
 }
 
+html,
+body {
+  min-width: 320px;
+}
+
 .container {
   box-sizing: border-box;
+  width: 100%;
   padding: 0 15px;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .container {
-    width: 768px;
-  }
 }
 @media only screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    margin: 0 auto;
   }
 }
 
@@ -276,28 +272,13 @@ img {
   color: rgb(255, 255, 255);
 }
 .filing__input {
-  padding-left: 16px;
+  padding: 15зч 16px;
   width: 358px;
   height: 50px;
   border: none;
   background-color: #2F303A;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 4px;
-  text-indent: 0;
-  color: rgba(255, 255, 255, 0.6);
-}
-.filing__input::-moz-placeholder {
-  padding: 0;
-  text-indent: 0;
-  color: rgba(255, 255, 255, 0.6);
-}
-.filing__input:-ms-input-placeholder {
-  padding: 0;
-  text-indent: 0;
-  color: rgba(255, 255, 255, 0.6);
-}
-.filing__input::placeholder {
-  padding: 0;
   text-indent: 0;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -334,28 +315,40 @@ img {
 .hero {
   background-color: #2F303A;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 0 128px 0;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg.png);
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 1600px;
   margin: 0 auto;
+}
+@media only screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 .hero__title {
   margin: 0 auto 30px auto;
-  width: 696px;
+  max-width: 370px;
   color: #FFFFFF;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.06em;
+  font-size: 26px;
+  line-height: 1.6;
+}
+@media only screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .button__service {
-  width: 216px;
+  width: 200px;
   height: 50px;
   border: none;
   background: #2196F3;
@@ -368,6 +361,11 @@ img {
   color: #FFFFFF;
   cursor: pointer;
   letter-spacing: 0.06em;
+}
+@media only screen and (min-width: 1200px) {
+  .button__service {
+    width: 216px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -624,7 +622,7 @@ img {
 .clients__descr {
   display: flex;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 767px) {
   .clients__descr {
     flex-shrink: 0;
     width: calc(50% - 30px);
@@ -817,9 +815,7 @@ img {
   display: flex;
   align-items: center;
   gap: 7px;
-  margin-left: 14px;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin: 20px;
 }
 .custom__checkbox__link {
   color: #2196F3;

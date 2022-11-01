@@ -14,7 +14,7 @@
     }
 
     &__input {
-        padding-left: 16px;
+        padding: 15зч 16px;
         width: 358px;
         height: 50px;
         border: none;
@@ -24,11 +24,7 @@
         text-indent: 0;
         color: rgba(255, 255, 255, 0.6);
 
-        &::placeholder {
-            padding: 0;
-            text-indent: 0;
-            color: rgba(255, 255, 255, 0.6);
-        }
+
     }
 
     &__btn {

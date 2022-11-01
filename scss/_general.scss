@@ -8,6 +8,9 @@ html {
     box-sizing: inherit;
 }
 
+
+
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: $body-color;
@@ -32,22 +35,39 @@ body {
     list-style: none;
 }
 
-.interest {
-    padding-top: 94px;
-    padding-bottom: 94px;
+.interest,
+.section-paddings {
+    @include for-mobile-and-tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include for-desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+html,
+body {
+    min-width: 320px;
 }
 
 .container {
     box-sizing: border-box;
-    width: 1200px;
+    width: 100%;
     padding: 0 15px;
-    margin: 0 auto;
+
+
+
+
+    @include for-desktop {
+        width: 1200px;
+        margin: 0 auto;
+    }
 }
 
-// image,
-// a {
-//     display: block;
-// }
+
 
 ul {
     margin: 0;

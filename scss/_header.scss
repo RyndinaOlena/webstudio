@@ -20,6 +20,8 @@
         & .blue {
             color: $hover-color;
         }
+
+        @include for-desktop {}
     }
 
     &__nav {

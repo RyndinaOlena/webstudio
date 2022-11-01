@@ -4,29 +4,49 @@
 .hero {
     background-color: #2F303A;
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 118px 0 128px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg.png);
     background-position: center;
     background-repeat: no-repeat;
-    max-width: 1600px;
+
     margin: 0 auto;
+
+
+
+    @include for-tablet {}
+
+    @include for-desktop {
+        max-width: 1600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+
 
     &__title {
         margin: 0 auto 30px auto;
-        width: 696px;
+        max-width: 370px;
         color: $body-color;
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.06em;
+        font-size: 26px;
+        line-height: 1.6;
+
+        @include for-desktop {
+            max-width: 696px;
+            font-size: 44px;
+            line-height: 1.36;
+        }
     }
 }
 
+
+
+
 .button__service {
-    width: 216px;
+    width: 200px;
     height: 50px;
     border: none;
     background: $hover-color;
@@ -39,4 +59,9 @@
     color: $body-color;
     cursor: pointer;
     letter-spacing: 0.06em;
+
+
+    @include for-desktop {
+        width: 216px;
+    }
 }

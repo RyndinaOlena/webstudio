@@ -3,7 +3,13 @@
 
 
 .work__section {
-    padding: 94px 0 0 0;
+    @include for-desktop {
+        padding-top: 94px;
+    }
+
+    @include for-mobile-and-tablet {
+        padding-top: 60px;
+    }
 }
 
 .work {
@@ -15,6 +21,17 @@
     line-height: 1.2;
     color: $title-text-color;
     list-style: none;
+
+    @include for-mobile-and-tablet {
+        flex-wrap: wrap;
+
+    }
+
+    &__list {
+        @include for-tablet {
+            width: calc(100% / 2 - 30px);
+        }
+    }
 
     &__title {
         line-height: 1.15;
