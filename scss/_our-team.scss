@@ -3,6 +3,14 @@
 .team {
     background-color: rgba(245, 244, 250, 1);
 
+    &__img {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+
+
+    }
+
     &__title {
         margin: 0 0 50px 0;
         font-size: 36px;
@@ -28,6 +36,7 @@
 
         @include for-desktop {
             display: flex;
+
         }
     }
 
@@ -54,6 +63,7 @@
         @include for-desktop {
             margin-bottom: 0;
             margin-right: 30px;
+            width: calc(100% / 4 - 15px);
 
             &:last-child {
                 margin-right: 0;

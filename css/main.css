@@ -499,6 +499,11 @@ img {
 .team {
   background-color: rgb(245, 244, 250);
 }
+.team__img {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
 .team__title {
   margin: 0 0 50px 0;
   font-size: 36px;
@@ -546,6 +551,7 @@ img {
   .team__list {
     margin-bottom: 0;
     margin-right: 30px;
+    width: calc(25% - 15px);
   }
   .team__list:last-child {
     margin-right: 0;
