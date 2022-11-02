@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header js-menu-container">
         <div class="container header__content">
             <nav class="header__menu">
                 <a href="index.html" class="header__logo"><span class="blue">Web</span>Studio</a>
@@ -28,22 +28,64 @@
                     <li class="header__list"><a href="portfolio.html" class="header__link">Портфоліо</a></li>
                     <li class="header__list"><a href="" class="header__link">Контакти</a></li>
                 </ul>
+
+                <button class="burger__btn js-open-menu js-close-menu" type="button">
+                    <svg class="burger__icon" width="40" height="40">
+                        <use class="burger__icon__open" href="./images/sprite.svg#icon-menu-open"></use>
+                        <use class="burger__icon__close" href="./images/sprite.svg#icon-menu-close"></use>
+                    </svg>
+                </button>
             </nav>
 
             <ul class="contacts">
-                <li class="contacts__link">
+                <li class="contacts__list">
                     <a href="mailto:info@devstudio.com" class="contacts__link header__link">
                         <svg class="contacts__icon contacts__icon-envelop">
                             <use href="./images/sprite.svg#icon-envelope" width="16px" height="12px"></use>
                         </svg><span>info@devstudio.com</span></a>
                 </li>
-                <li class="contacts__link">
+                <li class="contacts__list">
                     <a href="tel:+380961111111" class="contacts__link header__link">
                         <svg class="contacts__icon contacts__icon-phone">
                             <use href="./images/sprite.svg#icon-mobile" width="10px" height="16px"></use>
                         </svg><span>+38 096 111 11 11</span></a>
                 </li>
             </ul>
+
+
+
+        </div>
+        <div class="mobile-menu">
+
+            <div class="burger">
+                <ul class="burger__nav">
+                    <li class="burger__list">
+                        <a class="burger__link active">Студія</a>
+                    </li>
+                    <li class="burger__list">
+                        <a class="burger__link">Портфоліо</a>
+                    </li>
+                    <li class="burger__list">
+                        <a class="burger__link">Контакти</a>
+                    </li>
+                </ul>
+                <div class="burger__footer">
+                    <ul class="burger__contacts">
+                        <li class="burger__item"><a href="tel:+380961111111" class="burger__phone">+38 096 111 11 11</a>
+                        </li>
+                        <li class="burger__item"><a href="mailto:info@devstudio.com"
+                                class="burger__mail">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="burger__apps">
+                        <li class="burger__social"><a href="" class="burger__social__link">Instagram</a></li>
+                        <li class="burger__social"><a href="" class="burger__social__link">Twitter</a></li>
+                        <li class="burger__social"><a href="" class="burger__social__link">Facebook</a></li>
+                        <li class="burger__social"><a href="" class="burger__social__link">LinkedIn</a></li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
 
     </header>
@@ -123,7 +165,7 @@
             </div>
         </section>
         <!-- Наша команда -->
-        <section class="team interest">
+        <section class="team section-paddings">
             <div class="container">
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__item">
@@ -485,6 +527,7 @@
             </form>
         </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 

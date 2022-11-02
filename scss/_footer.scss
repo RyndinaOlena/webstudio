@@ -1,18 +1,30 @@
 .footer {
+    text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #2F303A;
 
+    @include for-tablet-and-desktop {
+        text-align: initial;
+
+    }
+
+
     &__logo {
         font-family: 'Raleway', sans-serif;
-        font-size: 26px;
-        line-height: 1.6;
+        font-size: 24px;
+        line-height: 1.2;
         text-decoration: none;
         color: $body-color;
         letter-spacing: 0.03em;
 
         & .blue {
             color: $hover-color;
+        }
+
+        @include for-desktop {
+            font-size: 26px;
+            line-height: 1.2;
         }
     }
 
@@ -54,20 +66,52 @@
     }
 
     &__wrapper {
-        display: flex;
-        align-items: baseline;
+        margin: 0 auto;
+
+        @include for-tablet {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include for-desktop {
+            display: flex;
+            align-items: baseline;
+
+        }
     }
 
     &__option {
 
-        width: 230px;
+
         margin: 0;
         padding: 0;
+
+        @include for-tablet {
+            text-align: center;
+            width: 50%;
+        }
+
+        @include for-desktop {
+            width: 230px;
+        }
     }
 
     &__apps {
-        margin: 12px 0 0 30px;
-        padding: 0;
+        margin-top: 60px;
+
+        @include for-tablet {
+            width: 50%;
+            margin: 0;
+
+
+        }
+
+        @include for-desktop {
+            margin: 0;
+            margin: 12px 0 0 30px;
+            padding: 0;
+        }
+
     }
 }
 
@@ -81,9 +125,23 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
 
     &__list {
+        display: flex;
         gap: 10px;
+        justify-content: center;
+        margin: 0 auto;
+
+        @include for-tablet {
+            justify-content: center;
+        }
+    }
+
+
+
+    @include for-desktop {
         display: flex;
         justify-content: space-between;
         align-items: center;

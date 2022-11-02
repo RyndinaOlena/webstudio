@@ -26,8 +26,10 @@
         list-style: none;
         padding: 0;
 
-        @include for-desktop {
+        @include for-tablet-and-desktop {
             gap: 0;
+
+
         }
     }
 
@@ -50,6 +52,10 @@
             width: 100%;
         }
 
+        @include for-tablet {
+            gap: 0;
+        }
+
 
         @include for-desktop {
             width: 172px;
@@ -60,10 +66,13 @@
         display: flex;
         flex-shrink: 0;
         width: calc(100% / 2 - 15px);
+        margin-bottom: 0;
 
         @include for-tablet {
             flex-shrink: 0;
             width: calc(100% / 3 - 15px);
+            margin-bottom: 30px;
+
         }
 
         @include for-desktop {

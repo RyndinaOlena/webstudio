@@ -1,7 +1,18 @@
 .filing {
     display: block;
-    margin-left: 93px;
-    padding: 0;
+    margin-top: 60px;
+
+    @include for-tablet {
+        text-align: center;
+        width: 100%;
+    }
+
+    @include for-desktop {
+        display: block;
+        margin-top: 0;
+        margin-left: 93px;
+        padding: 0;
+    }
 
     &__item {
         margin: 0 0 20px 0;
@@ -14,8 +25,9 @@
     }
 
     &__input {
-        padding: 15зч 16px;
-        width: 358px;
+        padding: 15px 16px;
+        margin-bottom: 20px;
+        width: 100%;
         height: 50px;
         border: none;
         background-color: #2F303A;
@@ -23,6 +35,16 @@
         border-radius: 4px;
         text-indent: 0;
         color: rgba(255, 255, 255, 0.6);
+
+        @include for-tablet {
+            display: block;
+            margin: 0 auto;
+            width: 450px;
+        }
+
+        @include for-desktop {
+            width: 358px;
+        }
 
 
     }
@@ -42,6 +64,12 @@
         border: transparent;
         border-radius: 4px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+        @include for-tablet {
+            margin: 0;
+            margin-top: 20px;
+
+        }
 
     }
 

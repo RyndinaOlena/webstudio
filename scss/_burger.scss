@@ -1,0 +1,147 @@
+.burger {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $body-color;
+    padding: 48px 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .is-open & {
+        display: flex;
+    }
+
+    &__btn {
+        position: absolute;
+        padding: 0;
+        right: 15px;
+        top: 10px;
+        z-index: 10;
+
+
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: none;
+
+        &:hover {
+            fill: $hover-color;
+        }
+
+        .is-open & {
+            position: fixed;
+        }
+
+
+        @include for-tablet-and-desktop {
+            display: none;
+        }
+    }
+
+    &__icon__open {
+        .is-open & {
+            display: none;
+        }
+    }
+
+    &__icon__close {
+        display: none;
+
+        .is-open & {
+            display: block;
+        }
+    }
+
+
+    &__nav {
+        padding: 0;
+    }
+
+    &__item {
+        margin-bottom: 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+    &__list {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        margin-bottom: 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__link {
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: $hover-color;
+        }
+    }
+
+    &__phone {
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 40px;
+        color: $hover-color;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+    }
+
+    &__mail {
+        color: $main-color-text;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+    }
+
+    &__apps {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 64px;
+        padding: 0;
+    }
+
+    &__social {
+        padding: 0 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            border: none;
+            padding-right: 0;
+        }
+    }
+
+
+    &__social__link {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: $hover-color;
+    }
+
+    &__contacts {
+        padding: 0;
+    }
+
+}

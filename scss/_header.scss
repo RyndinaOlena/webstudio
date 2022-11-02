@@ -1,5 +1,10 @@
 .header {
+    padding: 16px 15px;
     border-bottom: 1px solid rgba(236, 236, 236, 1);
+
+    @include for-tablet-and-desktop {
+        padding: 0;
+    }
 
     &__content,
     &__menu {
@@ -10,8 +15,8 @@
 
     &__logo {
         font-family: 'Raleway', sans-serif;
-        font-size: 26px;
-        line-height: 1.6;
+        font-size: 24px;
+        line-height: 1.16;
         margin-right: 91px;
         text-decoration: none;
         color: $title-text-color;
@@ -21,25 +26,22 @@
             color: $hover-color;
         }
 
-        @include for-desktop {}
+        @include for-desktop {
+            font-size: 26px;
+        }
     }
 
     &__nav {
         padding: 0;
         margin: 0;
         align-items: center;
-        display: flex;
         letter-spacing: 0.02em;
         list-style: none;
-    }
+        display: none;
 
-    &__nav {
-        padding: 0;
-        margin: 0;
-        align-items: center;
-        display: flex;
-        letter-spacing: 0.02em;
-        list-style: none;
+        @include for-tablet-and-desktop {
+            display: flex;
+        }
     }
 
     &__list {
@@ -84,8 +86,6 @@
     &:focus,
     &.active {
         color: $hover-color;
-
-
     }
 
 }
@@ -93,18 +93,38 @@
 
 
 .contacts {
-    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: none;
 
+    @include for-tablet {
+        display: block;
+    }
+
+    @include for-desktop {
+        display: flex;
+    }
 
     &__icon {
         fill: $main-color-text;
     }
 
-    &__link {
+
+    &__list {
         margin-right: 30px;
+
+        @include for-tablet {
+            margin: 10px 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
         display: flex;
         gap: 10px;
         align-items: center;
@@ -115,9 +135,6 @@
             fill: $hover-color;
         }
 
-        &:last-child {
-            margin-right: 0;
-        }
     }
 
 
