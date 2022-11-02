@@ -109,7 +109,7 @@
 }
 
 .form {
-    font-size: 12px;
+    font-size: 1px;
     line-height: 1.5;
 
     /* margin: 40px; */
@@ -238,6 +238,7 @@
     }
 
     &__text {
+        font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
         color: rgba(117, 117, 117, 1);

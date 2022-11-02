@@ -1074,7 +1074,7 @@ img {
 }
 
 .form {
-  font-size: 12px;
+  font-size: 1px;
   line-height: 1.5;
   /* margin: 40px; */
 }
@@ -1182,6 +1182,7 @@ img {
   opacity: 1;
 }
 .custom__checkbox__text {
+  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgb(117, 117, 117);
