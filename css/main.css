@@ -655,15 +655,16 @@ img {
 .clients__picture {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
   margin: 0;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   padding: 0;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (min-width: 1200px) {
   .clients__picture {
-    gap: 30px;
+    gap: 0;
   }
 }
 .clients__company {
@@ -692,17 +693,18 @@ img {
 }
 .clients__descr {
   display: flex;
-}
-@media only screen and (max-width: 767px) {
-  .clients__descr {
-    flex-shrink: 0;
-    width: calc(50% - 30px);
-  }
+  flex-shrink: 0;
+  width: calc(50% - 15px);
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .clients__descr {
     flex-shrink: 0;
-    width: calc(33.3333333333% - 30px);
+    width: calc(33.3333333333% - 15px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .clients__descr {
+    width: calc(16.6666666667% - 15px);
   }
 }
 .clients__name {

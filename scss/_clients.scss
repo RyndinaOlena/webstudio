@@ -18,6 +18,7 @@
     &__picture {
         display: flex;
         flex-wrap: wrap;
+        gap: 30px;
         margin: 0;
         justify-content: space-between;
         align-items: center;
@@ -25,8 +26,8 @@
         list-style: none;
         padding: 0;
 
-        @include for-mobile-and-tablet {
-            gap: 30px;
+        @include for-desktop {
+            gap: 0;
         }
     }
 
@@ -37,6 +38,7 @@
         border: 1px solid $icon-color;
         border-radius: 4px;
         height: 92px;
+
         @include transition(bordrer-color, fill);
 
         &:focus,
@@ -56,15 +58,16 @@
 
     &__descr {
         display: flex;
-
-        @include for-mobile {
-            flex-shrink: 0;
-            width: calc(100% / 2 - 30px);
-        }
+        flex-shrink: 0;
+        width: calc(100% / 2 - 15px);
 
         @include for-tablet {
             flex-shrink: 0;
-            width: calc(100% / 3 - 30px);
+            width: calc(100% / 3 - 15px);
+        }
+
+        @include for-desktop {
+            width: calc(100% / 6 - 15px);
         }
     }
 
