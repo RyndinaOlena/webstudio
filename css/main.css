@@ -546,16 +546,43 @@ img {
   background-color: #2F303A;
   text-align: center;
   padding: 118px 0 128px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg.png);
+  background-color: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  .hero {
+    background-image: url(/images/header/header-img-xs-min.jpg);
+  }
+}
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url(/images/header/header-img-s-min.jpg);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    background-image: url(/images/header/header-img-m-min.jpg);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url(/images/header/header-img-l-min.jpg);
+  }
 }
 @media only screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: url(/images/header/header-img-xl-min.jpg);
+  }
+}
+@media only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url(/images/header/header-img-xxl-min.jpg);
   }
 }
 .hero__title {
