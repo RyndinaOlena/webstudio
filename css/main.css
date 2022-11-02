@@ -506,10 +506,16 @@ img {
 }
 .team__title {
   margin: 0 0 50px 0;
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+}
+@media only screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
 }
 .team__item {
   padding: 0;
@@ -564,8 +570,15 @@ img {
 }
 .team__device {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 16px;
+  gap: 10px;
+}
+@media only screen and (min-width: 1200px) {
+  .team__device {
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 .team__descr {
   padding: 30px;
