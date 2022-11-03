@@ -219,6 +219,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 9;
 }
 .is-open .burger {
   display: flex;
@@ -1035,6 +1036,12 @@ img {
   transition-duration: 250ms;
   transition-property: scale;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (max-width: 400px) {
+  .modal {
+    width: 100%;
+    max-width: none;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .modal {

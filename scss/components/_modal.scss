@@ -35,6 +35,11 @@
 
     @include transition(scale);
 
+    @include for-small-mobile {
+        width: 100%;
+        max-width: none;
+    }
+
     @include for-desktop {
         max-width: none;
         width: 528px;
