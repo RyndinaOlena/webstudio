@@ -84,6 +84,12 @@
 
     &__link {
 
+        &,
+        &:visited {
+            color: $title-text-color;
+            text-decoration: none;
+        }
+
         &:hover,
         &:focus,
         &.active {
@@ -94,10 +100,15 @@
     &__phone {
         font-weight: 500;
         font-size: 34px;
-        line-height: 40px;
+        line-height: 1.2px;
         color: $hover-color;
         text-decoration: none;
         letter-spacing: 0.02em;
+
+        @include for-small-mobile {
+            font-size: 27px;
+        }
+
     }
 
     &__mail {
@@ -138,6 +149,10 @@
         letter-spacing: 0.02em;
         text-decoration: none;
         color: $hover-color;
+
+        @include for-small-mobile {
+            font-size: 12px;
+        }
     }
 
     &__contacts {

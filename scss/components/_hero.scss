@@ -1,6 +1,7 @@
 // * < !-- Ефективні рішення для вашого бізнесу -->*/ 
 
 
+
 .hero {
     background-color: #2F303A;
     text-align: center;
@@ -13,26 +14,24 @@
 
     margin: 0 auto;
 
-    // background-image: image-set(url(../images/header/header-img-xs-min.jpg) 1x,
-    //         url(../images/header/header-img-s-min.jpg) 2x);
 
     @include for-mobile {
-        background-image: url(../images/header/header-img-xs-min.jpg);
+        background-image: $gradient, url(../images/header/header-img-xs-min.jpg);
 
         @media (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 192dpi) {
-            background-image: url(../images/header/header-img-s-min.jpg);
+            background-image: $gradient, url(../images/header/header-img-s-min.jpg);
         }
     }
 
 
 
     @include for-tablet {
-        background-image: url(../images/header/header-img-m-min.jpg);
+        background-image: $gradient, url(../images/header/header-img-m-min.jpg);
 
         @media (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 192dpi) {
-            background-image: url(../images/header/header-img-l-min.jpg);
+            background-image: $gradient, url(../images/header/header-img-l-min.jpg);
         }
 
     }
@@ -42,11 +41,11 @@
         padding-top: 200px;
         padding-bottom: 200px;
 
-        background-image: url(../images/header/header-img-xl-min.jpg);
+        background-image: $gradient, url(../images/header/header-img-xl-min.jpg);
 
         @media (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 192dpi) {
-            background-image: url(../images/header/header-img-xxl-min.jpg);
+            background-image: $gradient, url(../images/header/header-img-xxl-min.jpg);
         }
     }
 
