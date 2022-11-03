@@ -38,6 +38,7 @@
     @include for-small-mobile {
         width: 100%;
         max-width: none;
+        height: 620px;
     }
 
     @include for-desktop {

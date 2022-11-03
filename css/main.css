@@ -289,7 +289,7 @@ img {
   text-decoration: none;
   letter-spacing: 0.02em;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .burger__phone {
     font-size: 27px;
   }
@@ -327,7 +327,7 @@ img {
   text-decoration: none;
   color: rgb(33, 150, 243);
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .burger__social__link {
     font-size: 12px;
   }
@@ -1037,10 +1037,11 @@ img {
   transition-property: scale;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .modal {
     width: 100%;
     max-width: none;
+    height: 620px;
   }
 }
 @media only screen and (min-width: 1200px) {
